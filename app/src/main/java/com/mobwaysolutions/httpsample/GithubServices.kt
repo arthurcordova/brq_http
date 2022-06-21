@@ -9,4 +9,7 @@ interface GithubServices {
     @GET("users/{user}/repos")
     fun repositoriosDoUsuario(@Path("user") user : String) : Call<List<RepositorioModel>>
 
+    @GET("users")
+    fun usuarios() : Call<List<UsuarioModel>>
+
 }
