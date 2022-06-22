@@ -5,9 +5,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.mobwaysolutions.httpsample.R
-import com.mobwaysolutions.httpsample.RepositorioModel
 import com.mobwaysolutions.httpsample.UsuarioModel
-import com.squareup.picasso.Picasso
+import com.mobwaysolutions.httpsample.loadFromUrl
 
 class UsuarioViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -19,8 +18,4 @@ class UsuarioViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         ivAvatar.loadFromUrl(usuarioModel.photo)
     }
 
-}
-
-fun ImageView.loadFromUrl(url: String?) {
-    Picasso.get().load(url).into(this)
 }
