@@ -1,8 +1,5 @@
 package com.mobwaysolutions.httpsample.generics
 
-import android.widget.Button
-import com.mobwaysolutions.httpsample.UsuarioModel
-
 fun main() {
 
     val cozinhar = Cozinhar<Alimento>()

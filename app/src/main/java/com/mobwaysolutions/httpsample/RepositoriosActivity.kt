@@ -1,18 +1,17 @@
 package com.mobwaysolutions.httpsample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.View.GONE
-import android.view.View.VISIBLE
-import android.widget.Button
-import android.widget.EditText
 import androidx.appcompat.widget.AppCompatImageButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.progressindicator.CircularProgressIndicator
 import com.google.android.material.textfield.TextInputLayout
 import com.mobwaysolutions.httpsample.adapter.RepositorioAdapter
+import com.mobwaysolutions.httpsample.dto.RepositorioModel
+import com.mobwaysolutions.httpsample.service.RetrofitHelper
+import com.mobwaysolutions.httpsample.view.IssuesActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -23,7 +22,13 @@ class RepositoriosActivity : AppCompatActivity(), Callback<List<RepositorioModel
     lateinit var etSearch: TextInputLayout
     lateinit var buttonSearch: AppCompatImageButton
     lateinit var cipLoading: CircularProgressIndicator
-    private val repositorioAdapter = RepositorioAdapter()
+    private val repositorioAdapter = RepositorioAdapter { repo ->
+        Intent(this, IssuesActivity::class.java).apply {
+            putExtra("repo_p", repo)
+            putExtra("owner_p", "arthurcordova")
+            startActivity(this)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +51,8 @@ class RepositoriosActivity : AppCompatActivity(), Callback<List<RepositorioModel
                 }
             }
         }
+
+        fetchData("arthurcordova")
     }
 
     fun fetchData(userName: String) {

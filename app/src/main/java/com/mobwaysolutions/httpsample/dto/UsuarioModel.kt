@@ -1,4 +1,4 @@
-package com.mobwaysolutions.httpsample
+package com.mobwaysolutions.httpsample.dto
 
 import com.google.gson.annotations.SerializedName
 

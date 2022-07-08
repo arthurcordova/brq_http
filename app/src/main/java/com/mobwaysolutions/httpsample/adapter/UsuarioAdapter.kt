@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mobwaysolutions.httpsample.R
-import com.mobwaysolutions.httpsample.UsuarioModel
+import com.mobwaysolutions.httpsample.dto.UsuarioModel
 
 class UsuarioAdapter : RecyclerView.Adapter<UsuarioViewHolder>() {
 

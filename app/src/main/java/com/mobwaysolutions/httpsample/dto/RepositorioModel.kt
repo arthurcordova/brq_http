@@ -1,6 +1,7 @@
-package com.mobwaysolutions.httpsample
+package com.mobwaysolutions.httpsample.dto
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class RepositorioModel(
     @SerializedName("id")
@@ -9,4 +10,4 @@ data class RepositorioModel(
     val nome: String,
     @SerializedName("full_name")
     val nomeCompleto : String
-)
+) : Serializable

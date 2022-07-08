@@ -2,7 +2,9 @@ package com.mobwaysolutions.httpsample
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.mobwaysolutions.httpsample.dto.UsuarioModel
 import com.mobwaysolutions.httpsample.interact.UsuariosInteract
+import com.mobwaysolutions.httpsample.service.RetrofitHelper
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -4,7 +4,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.mobwaysolutions.httpsample.R
-import com.mobwaysolutions.httpsample.RepositorioModel
+import com.mobwaysolutions.httpsample.dto.RepositorioModel
 
 class RepositorioViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

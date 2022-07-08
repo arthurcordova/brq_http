@@ -16,18 +16,19 @@
         android:theme="@style/Theme.HttpSample"
         tools:targetApi="31">
         <activity
+            android:name=".view.IssuesActivity"
+            android:exported="false" />
+        <activity
             android:name=".UsuariosActivity"
-            android:exported="true" >
+            android:exported="false"/>
+        <activity
+            android:name=".RepositoriosActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".RepositoriosActivity"
-            android:exported="true">
-
         </activity>
     </application>
 
